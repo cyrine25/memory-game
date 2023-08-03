@@ -1,0 +1,85 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks",
+    "react",
+    "prettier",
+    "import"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "ignoreRestSiblings": true, "argsIgnorePattern": "^_+" }
+    ],
+    "arrow-body-style": ["error", "as-needed"],
+    "eqeqeq": "error",
+    "import/no-anonymous-default-export": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "pathGroups": [
+          {
+            "pattern": "(@/styles|assets|hooks|components|routes|services|slices|styles|types|utils)/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "types*",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "jsx-quotes": ["error", "prefer-double"],
+    "no-alert": "error",
+    "no-console": "error",
+    "no-bitwise": "error",
+    "no-duplicate-imports": "error",
+    "no-else-return": "error",
+    "no-self-compare": "error",
+    "no-shadow": "error",
+    "no-unused-vars": "off",
+    "react/no-array-index-key": "error",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
