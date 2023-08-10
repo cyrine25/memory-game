@@ -8,13 +8,14 @@ const GameGrid = () => {
   const GameContextData = useContext(GameContext)
 
   return (
-    <>
+    <div className="layout">
       <div className="gameGrid">
         {GameContextData.foodData.map(item => (
           <GridButton item={item} key={item.id} />
         ))}
       </div>
-    </>
+      <div className="gameCount">Game Count : {GameContextData.moveCount}</div>
+    </div>
   )
 }
 export default GameGrid
