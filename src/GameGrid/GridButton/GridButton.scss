@@ -1,9 +1,8 @@
+@import 'src/styles/variables.scss';
 .StyledGridButton {
   width: 100px;
   height: 100px;
-  // -webkit-backface-visibility: hidden;
-  // backface-visibility: hidden;
-  background: #fbfbfb;
+  background: $GridButtonBG;
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;

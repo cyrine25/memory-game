@@ -1,0 +1,59 @@
+.modal-content {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.76);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.outcome {
+  font-family: 'DiloWorld';
+  font-size: 48px;
+  font-weight: 200;
+}
+.action-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 18px 0;
+}
+.reset-btn {
+  background: transparent;
+  border: 4px solid #ffffff;
+  font-size: 32px;
+  font-weight: 200;
+  padding: 12px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: 0 24px;
+  background: #fbab60;
+}
+
+@media (max-width: 768px) {
+  .outcome {
+    font-size: 32px;
+  }
+}
+@media (max-width: 465px) {
+  .outcome {
+    font-size: 24px;
+  }
+  .reset-btn {
+    font-size: 18px;
+  }
+}

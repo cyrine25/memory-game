@@ -74,8 +74,25 @@ const GameContextProvider = (props: Props) => {
   if (gameContextData.moves.length === 2) {
     checkMoves()
   }
-
-  const providerData = { ...gameContextData, addMove: addMove }
+  useEffect(() => {
+    if (gameContextData.foodData.length !== 0 && gameContextData.matched.length === gameContextData.foodData.length) {
+      setGameContextData(prevState => ({
+        ...prevState,
+        isGameOver: true,
+      }))
+    }
+  }, [gameContextData.matched, gameContextData.foodData])
+  const resetGame = () => {
+    setGameContextData({
+      foodData: gameContextData.foodData,
+      moves: [],
+      prevMoves: [],
+      matched: [],
+      isGameOver: false,
+      moveCount: 0,
+    })
+  }
+  const providerData = { ...gameContextData, addMove: addMove, resetGame: resetGame }
 
   return <GameContext.Provider value={providerData}>{props.children}</GameContext.Provider>
 }

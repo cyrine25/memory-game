@@ -23,4 +23,5 @@ export interface GameContextState {
   isGameOver: boolean
   moveCount: number
   addMove: (newMove: Move) => void
+  resetGame: () => void
 }
