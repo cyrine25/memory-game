@@ -1,0 +1,21 @@
+@import 'src/styles/variables.scss';
+.StyledGridButton {
+  width: 100px;
+  height: 100px;
+  background: $GridButtonBG;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: solid 1px #383737;
+
+  .foodItemImg {
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: calc(80px * 0.7);
+  }
+}
+.flipped {
+  background: linear-gradient(to left, #20002c, #43314a);
+}
